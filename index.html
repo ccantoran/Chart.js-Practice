@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html style="overflow: hidden;">
+<head>
+    <!-- <script src="../Resources/Apis/Proxy.js" cwidget="StackedGraph"></script>     -->
+    <!-- <script src="./custom_widget.js"></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./chart.umd.js"></script>
+    <title>StackedGraph</title>
+</head>
+
+<body>
+	<div class="graph">
+		<canvas id="myChart4"></canvas>
+	</div>
+
+	<div class="legend">
+		<h1>LANE 1</h1>
+		<div class="legendInfo">
+			<div class="legendLabelColor">
+				<ul class="colorBullets">
+					<li>Defect</li>
+					<li class="defect1"></li>
+					<li class="defect2"></li>
+					<li class="defect3"></li>
+					<li class="defect4"></li>
+					<li class="defect5"></li>
+					<li class="defect6"></li>
+					<li class="defect7"></li>
+					<li class="defect8"></li>
+					<li class="defect9"></li>
+				</ul>
+		  		<ul class="legendLabels">
+					<li></li>
+					<li>NO READ</li>
+					<li>BARCODE MISMATCH</li>
+					<li>OFFSET LID</li>
+					<li>TIPPED POD</li>
+					<li>GROSS DEFECT</li>
+					<li>PARTIAL SEAL</li>
+					<li>COFFEE IN SEAL</li>
+					<li>DIRTY RIM</li>
+					<li>PRESS DEPTH</li>
+				</ul>
+			</div>
+			<ul class="lanePercent">
+				<li>Percent</li>
+				<li class="percent1">0.000%</li>
+				<li class="percent2">0.000%</li>
+				<li class="percent3">0.000%</li>
+				<li class="percent4">0.000%</li>
+				<li class="percent5">0.000%</li>
+				<li class="percent6">0.000%</li>
+				<li class="percent7">0.000%</li>
+				<li class="percent8">0.000%</li>
+				<li class="percent9">0.000%</li>
+			</ul>
+			<ul class="laneTotal">
+				<li>Total</li>
+				<li class="total1">0</li>
+				<li class="total2">0</li>
+				<li class="total3">0</li>
+				<li class="total4">0</li>
+				<li class="total5">0</li>
+				<li class="total6">0</li>
+				<li class="total7">0</li>
+				<li class="total8">0</li>
+				<li class="total9">0</li>
+			</ul>
+		</div>
+		
+	</div>    
+	
+
+	<style>
+		 @font-face {
+      font-family: "Open Sans";
+      src: url(../Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+		}
+		body{
+			font-family: "Open Sans";
+			display: flex;
+			justify-content: space-between;
+			width:1400px;
+		}
+		li{
+			list-style: none;
+			padding-left: 0;
+		}
+		.graph{
+			width: 60%;
+		}
+
+		h1{
+			margin:0;
+			padding:0;
+		}
+		.legend{
+			width: 38%;
+			display:flex;
+			flex-direction: column;
+		}
+		.legendInfo{
+			font-size: 14px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.legendLabelColor{
+			display: flex;
+		}
+		.colorBullets, .legendLabels, .lanePercent, .laneTotal{
+			padding:0;
+			margin:0;
+		}
+		.legendLabels>li, .colorBullets>li, .lanePercent>li, .laneTotal>li{
+			height: 25px;
+			margin-bottom:5px;
+		}
+		.colorBullets>li{
+			height:25px;
+			width:25px;
+			border-radius: 15px;
+			margin-right: 10px;
+		}
+		.legendLabels>li{
+			display: flex;
+			align-items: center;
+		}
+		.laneTotal>li, .lanePercent>li{
+			text-align: center;
+		}
+
+		.defect1{
+			background-color: rgb(0, 70, 255);
+			
+		}
+		/* .defect2{
+			background-color:rgb(200, 15, 18);	
+		} */
+		.defect2{
+			background-color: rgb(138, 207, 87);
+		}
+		.defect3{
+			background-color: rgb(0, 174, 238);
+		}
+		.defect4{
+			background-color: rgb(114, 50, 157);
+		}
+		.defect5{
+			background-color: rgb(255, 191, 40);
+		}
+		.defect6{
+			background-color:rgb(126, 126, 126);
+		}
+		.defect7{
+			background-color: rgb(255, 0, 255);
+		}
+		.defect8{
+			background-color: rgb(0, 255, 255);
+		}
+		.defect9{
+			background-color: rgb(0, 0, 0);
+		}
+	</style>
+
+
+    <script src="./custom_widget.js"></script>
+
+
+</body>
+</html>
